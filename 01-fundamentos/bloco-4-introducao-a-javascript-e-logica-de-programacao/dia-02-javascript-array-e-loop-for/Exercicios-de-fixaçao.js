@@ -33,6 +33,7 @@ for (let name of names) {
     
 }
 
+
 let namee = 'João';
 
 for (let letras of namee) {
