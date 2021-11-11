@@ -6,11 +6,21 @@ Multiplicação (a * b)
 Divisão (a / b)
 Módulo (a % b) */
 
-function math(a , b){
-    let soma = a + b
-    console.log(soma)
+function math(a , b , operator){
+    if(operator == '+' ){
+        return a + b
+    } else if(operator == '-'){
+        return a - b
+    } else if(operator == '*'){
+        return a * b
+    } else if(operator = '/'){
+        return a / b
+    } else{
+        return a % b
+    }
 }
- math(5 , 7)
+ math(5 , 7 , '+')
+ 
 
 
 
@@ -68,7 +78,7 @@ triangle (30 , 100 , 50)
 
 
 
-* let car = {
+ /*   let car = {
     type: 'Fiat',
     model: '500',
     color: 'white',
