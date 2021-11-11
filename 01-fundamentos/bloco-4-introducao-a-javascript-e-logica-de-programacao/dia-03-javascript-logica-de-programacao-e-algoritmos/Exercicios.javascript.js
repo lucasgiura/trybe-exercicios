@@ -23,17 +23,45 @@ for (i = 0 ; i < n ; i += 1){
 /* 3- Agora inverta o lado do triângulo. */
 
 let linhaTrianguloRetanguloInverso = ''
-let space = ' '
-let spaceTriangulo = ''
-let y = 0
-for(i = 5 ; i > y ; i -= 1){
-    spaceTriangulo =  space + spaceTriangulo
-}
-for (let i = 0; i < n; i += 1) {
-    linhaTrianguloRetanguloInverso = linhaTrianguloRetanguloInverso + symbol
-    console.log(spaceTriangulo + linhaTrianguloRetanguloInverso )
+let colunaTriangulo = n
 
-};
+for	(let i = 0 ; i < n ; i += 1){  
+for (let indexColune = 0; indexColune <= n; indexColune += 1) {
+    if(indexColune < colunaTriangulo){
+			linhaTrianguloRetanguloInverso = linhaTrianguloRetanguloInverso + ' ' 
+		} else {
+			linhaTrianguloRetanguloInverso = linhaTrianguloRetanguloInverso + symbol
+		}
+  }
+	console.log(linhaTrianguloRetanguloInverso);
+	colunaTriangulo -= 1;
+	linhaTrianguloRetanguloInverso = '';
+	}
+
+	// 4 - Faça uma piramide 
+/* 	 *
+		***
+ 	 *****
+ */
+
+	let linhaPiramide = ''
+	let midOfMatrix = (n + 1) / 2 //Para achar o meio, sempre soma a base por +1 e divide por 2
+	let controlLeft = midOfMatrix
+	let controlRight = midOfMatrix
+
+	for(indexTri = 0 ; indexTri <= midOfMatrix ; indexTri+= 1){
+		for(coluneInde = 0 ; coluneInde <= n; coluneInde+= 1){
+		if(coluneInde > controlLeft && coluneInde < controlRight){
+			linhaPiramide = linhaPiramide + symbol
+		} else{
+			linhaPiramide = linhaPiramide + ' '
+		}
+	}
+		console.log(linhaPiramide)
+		controlLeft -= 1
+		controlRight += 1
+		linhaPiramide = ''
+	}
 
 
 
